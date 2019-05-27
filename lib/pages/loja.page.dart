@@ -11,7 +11,8 @@ class Lojinha extends StatelessWidget {
       ),
       body: Container(
         decoration: BoxDecoration(
-          image: DecorationImage(image: AssetImage("assets/img/fundo.png"), fit: BoxFit.cover),
+          image: DecorationImage(
+              image: AssetImage("assets/img/fundo.png"), fit: BoxFit.cover),
         ),
         child: ListView(
           children: <Widget>[
@@ -25,26 +26,27 @@ class Lojinha extends StatelessWidget {
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-
             IconButton(
-              icon: Icon(Icons.chat,color: Color(0xFF37474F)),
+              icon: Icon(Icons.chat, color: Color(0xFF37474F)),
               tooltip: 'Chat',
-              onPressed: (){},
+              onPressed: () {},
             ),
             IconButton(
-              icon: Icon(Icons.home,color: Color(0xFF37474F) ),
+              icon: Icon(Icons.home, color: Color(0xFF37474F)),
               tooltip: 'Home',
-              onPressed: (){Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => ErrorPage(),
-                ),
-              );},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ErrorPage(),
+                  ),
+                );
+              },
             ),
             IconButton(
-              icon: Icon(Icons.person,color: Color(0xFF37474F)),
+              icon: Icon(Icons.person, color: Color(0xFF37474F)),
               tooltip: 'Meu Perfil',
-              onPressed: (){},
+              onPressed: () {},
             ),
           ],
         ),
@@ -62,28 +64,46 @@ Widget cardItem1() {
           child: Image.asset("assets/img/caneca.png"),
         ),
         Container(
-          padding: EdgeInsets.all(5),
+          padding: EdgeInsets.only(top: 5, left: 5),
           alignment: Alignment.centerLeft,
-          child: Text("RS 30,00", style: TextStyle(fontSize:30, fontWeight: FontWeight.bold,),),
-        ),
-        Container(
-          padding: EdgeInsets.only(bottom: 10, left: 5),
-          alignment: Alignment.centerLeft,
-          child: Text("Caneca(850ml) + tiraante"),
-        ),
-        Container(
-          padding: EdgeInsets.only(left: 225, right: 7),
-          child: RaisedButton(
-            shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20)),
-            color: Color(0xFF263238),
-            onPressed: () {},
-            child: Row(
-              children: <Widget>[
-                Text('Comprar ', style: TextStyle(fontSize: 15, color: Colors.white),),
-                Icon(Icons.shopping_cart, color: Colors.white,),
-              ],
+          child: Text(
+            "RS 30,00",
+            style: TextStyle(
+              fontSize: 30,
+              fontWeight: FontWeight.bold,
             ),
           ),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            Container(
+              padding: EdgeInsets.only(bottom: 10, left: 5),
+              alignment: Alignment.centerLeft,
+              child: Text('Caneca(850ml) + Tirante'),
+            ),
+            Container(
+              padding: EdgeInsets.only(left: 7),
+              child: RaisedButton(
+                shape: new RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(20)),
+                color: Color(0xFF263238),
+                onPressed: () {},
+                child: Row(
+                  children: <Widget>[
+                    Text(
+                      'Comprar ',
+                      style: TextStyle(fontSize: 15, color: Colors.white),
+                    ),
+                    Icon(
+                      Icons.shopping_cart,
+                      color: Colors.white,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
         ),
       ],
     ),
@@ -99,31 +119,48 @@ Widget cardItem2() {
           child: Image.asset("assets/img/tatuagem.png"),
         ),
         Container(
-          padding: EdgeInsets.all(5),
+          padding: EdgeInsets.only(top: 5, left: 5),
           alignment: Alignment.centerLeft,
-          child: Text("RS 1,00", style: TextStyle(fontSize:30, fontWeight: FontWeight.bold,),),
-        ),
-        Container(
-          padding: EdgeInsets.only(bottom: 10, left: 5),
-          alignment: Alignment.centerLeft,
-          child: Text("7 modelos de Tatuagens"),
-        ),
-        Container(
-          padding: EdgeInsets.only(left: 225, right: 7),
-          child: RaisedButton(
-            shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20)),
-            color: Color(0xFF263238),
-            onPressed: () {},
-            child: Row(
-              children: <Widget>[
-                Text('Comprar ', style: TextStyle(fontSize: 15, color: Colors.white),),
-                Icon(Icons.shopping_cart, color: Colors.white,),
-              ],
+          child: Text(
+            "RS 1,00",
+            style: TextStyle(
+              fontSize: 30,
+              fontWeight: FontWeight.bold,
             ),
           ),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            Container(
+              padding: EdgeInsets.only(bottom: 10, left: 5),
+              alignment: Alignment.centerLeft,
+              child: Text("7 modelos de Tatuagens"),
+            ),
+            Container(
+              padding: EdgeInsets.only(left: 7),
+              child: RaisedButton(
+                shape: new RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(20)),
+                color: Color(0xFF263238),
+                onPressed: () {},
+                child: Row(
+                  children: <Widget>[
+                    Text(
+                      'Comprar ',
+                      style: TextStyle(fontSize: 15, color: Colors.white),
+                    ),
+                    Icon(
+                      Icons.shopping_cart,
+                      color: Colors.white,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
         ),
       ],
     ),
   );
 }
-

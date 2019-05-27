@@ -6,6 +6,7 @@ import 'package:atleticaapp/pages/error2.page.dart';
 
 
 class LoginPage extends StatelessWidget {
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
